@@ -11,5 +11,5 @@ app.use(passport.initialize());
 // routes
 app.use(require("./routes/index"));
 
-app.listen(4000);
-console.log('Server on port 4000');
+app.listen(8080);
+console.log('Server on port 8080');
