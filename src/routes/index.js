@@ -6,7 +6,7 @@ require("../middleware/auth.google");
 const authService = require('../middleware/auth.jwt');
 
 router.use(function(req, res, next) {
-    let allowedOrigins = ['*']; // list of url-s
+    let allowedOrigins = ['*']; 
     let origin = req.headers.origin;
     if (allowedOrigins.indexOf(origin) > -1) {
       res.setHeader('Access-Control-Allow-Origin', origin);
@@ -18,7 +18,7 @@ router.use(function(req, res, next) {
 
 router.use(function(err, req, res, next) {
     console.error(err.stack);
-    res.status(500).send('Something broke!');
+    res.status(500).send('Algo anda mal!');
   });
 
 // Autentificación Google
